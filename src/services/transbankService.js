@@ -1,60 +1,68 @@
 const { POSAutoservicio } = require('transbank-pos-sdk');
 const logger = require('../utils/logger');
+const fs = require('fs');
+const os = require('os');
+
+const isAndroid = os.platform() === 'android';
+
+function getAndroidSerialPorts() {
+  return fs.readdirSync('/dev')
+    .filter(name =>
+      name.startsWith('ttyUSB') ||
+      name.startsWith('ttyACM') ||
+      name.startsWith('ttyS') ||
+      name.startsWith('ttyFIQ') ||
+      name.startsWith('ttySMT')
+    )
+    .map(name => `/dev/${name}`);
+}
 
 class TransbankService {
   constructor() {
     this.pos = new POSAutoservicio();
     this.connectedPort = null;
 
-    this.pos.setDebug(true);    
+    this.pos.setDebug(true);
   }
 
   async autoconnect() {
     try {
-      // Si ya hay conexión activa, no intentamos reconectar
       if (this.pos.isConnected() && this.connectedPort) {
         logger.info(`POS ya conectado en ${this.connectedPort.path}`);
         return this.connectedPort;
       }
-  
-      const allPorts = await this.pos.listPorts();
-  
-      const validPorts = allPorts.filter(p =>
-        p.path.toLowerCase().includes('acm') ||
-        p.path.toLowerCase().includes('usb')
-      );
-  
-      if (validPorts.length === 0) {
-        throw new Error('No se encontró ningún POS conectado (puertos ACM o USB)');
-      }
-  
-      // Priorizar ttyACM0
-      validPorts.sort((a, b) => {
-        if (a.path === '/dev/ttyACM0') return -1;
-        if (b.path === '/dev/ttyACM0') return 1;
-        return 0;
-      });
-  
-      for (const port of validPorts) {
-        try {
-          await this.pos.connect(port.path);
-          this.connectedPort = port;
-          logger.info(`Conectado automáticamente al POS en ${port.path}`);
-          return port;
-        } catch (err) {
-          logger.warn(`No se pudo conectar a ${port.path}: ${err.message}`);
-          continue;
+
+      if (isAndroid) {
+        const candidates = getAndroidSerialPorts();
+
+        for (const path of candidates) {
+          try {
+            logger.info(`Intentando conectar a ${path} @115200`);
+            await this.pos.connect(path);
+            this.connectedPort = { path };
+            logger.info(`Conectado manualmente en Android al puerto ${path}`);
+            return this.connectedPort;
+          } catch (err) {
+            logger.warn(`Fallo en ${path}: ${err.message}`);
+          }
         }
+
+        throw new Error('No se pudo conectar a ningún puerto disponible en Android');
       }
-  
-      throw new Error('No fue posible establecer conexión con ninguno de los puertos detectados');
+
+      const port = await this.pos.autoconnect();
+      if (!port) throw new Error('No se encontró ningún POS conectado');
+
+      this.connectedPort = port;
+      logger.info(`Conectado automáticamente al POS en ${port.path}`);
+      return port;
+
     } catch (error) {
       logger.error('Error en autoconnect():', error);
       this.connectedPort = null;
       throw error;
     }
   }
-   
 
   async connectToPort(portPath) {
     const response = await this.pos.connect(portPath);
@@ -73,7 +81,11 @@ class TransbankService {
 
   async sendSaleCommand(amount, ticketNumber, printVoucher = true) {
     try {
-      const response = await this.pos.sale(amount, ticketNumber, {
+      // Asegurar formato de ticket
+      const ticket = ticketNumber.padEnd(20, '0').substring(0, 20);
+      logger.info(`Enviando venta - Monto: ${amount}, Ticket: ${ticket}, Voucher: ${printVoucher}`);
+
+      const response = await this.pos.sale(amount, ticket, {
         printOnPos: printVoucher
       });
 

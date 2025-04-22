@@ -22,10 +22,20 @@ exports.processPayment = async (req, res) => {
       printVoucher
     );
 
-    //result.responseMESSAGE = result.responseMessage || 'Transacción exitosa';
+    //result.responseMessage = result.responseMessage || 'Transacción exitosa';
 
     logger.info(`Conexión exitosa - Operación: ${result.operationNumber}`);
-    responseHandler.success(res, 'Conexión exitosa', result);
+    responseHandler.success(res, result.message, {
+      operationNumber: result.operationNumber,
+      responseCode: result.responseCode,
+      approved: result.approved,
+      attempts: result.attempts,
+      type: result.type,
+      raw: result.raw,
+      fields: result.fields
+    });
+    
+    
   } catch (error) {
     if (error.message.includes('cancelada')) {
       logger.warn(`Transacción cancelada: ${error.message}`);

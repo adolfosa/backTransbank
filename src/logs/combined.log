@@ -941,3 +941,541 @@
 {"level":"error","message":"Error durante la venta: ACK has not been received in 2000 ms.","stack":"Error: ACK has not been received in 2000 ms.\n    at Timeout._onTimeout (/opt/lampp/htdocs/backTransbank/node_modules/transbank-pos-sdk/dist/transbank.js:1:8305)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)","timestamp":"2025-04-22 12:09:39"}
 {"level":"error","message":"Error en transacción: ACK has not been received in 2000 ms.","stack":"Error: ACK has not been received in 2000 ms.\n    at Timeout._onTimeout (/opt/lampp/htdocs/backTransbank/node_modules/transbank-pos-sdk/dist/transbank.js:1:8305)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)","timestamp":"2025-04-22 12:09:39"}
 {"level":"error","message":"Error durante el shutdown: Timeout cerrando servidor","stack":"Error: Timeout cerrando servidor\n    at Timeout._onTimeout (/opt/lampp/htdocs/backTransbank/src/server.js:102:37)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)","timestamp":"2025-04-22 12:09:42"}
+{"level":"info","message":"Iniciando servidor en modo production","timestamp":"2025-04-22 15:38:31"}
+{"level":"info","message":"Servidor Transbank POS escuchando en puerto 3000","timestamp":"2025-04-22 15:38:31"}
+{"level":"warn","message":"No se pudo conectar a /dev/ttyACM0: ACK has not been received in 2000 ms.","timestamp":"2025-04-22 15:38:34"}
+{"level":"warn","message":"No se pudo conectar a /dev/ttyACM1: ACK has not been received in 2000 ms.","timestamp":"2025-04-22 15:38:36"}
+{"level":"error","message":"Error en autoconnect(): No fue posible establecer conexión con ninguno de los puertos detectados","stack":"Error: No fue posible establecer conexión con ninguno de los puertos detectados\n    at TransbankService.autoconnect (/opt/lampp/htdocs/backTransbank-1/src/services/transbankService.js:50:13)","timestamp":"2025-04-22 15:38:36"}
+{"level":"error","message":"Error en conexión automática con POS: No fue posible establecer conexión con ninguno de los puertos detectados","stack":"Error: No fue posible establecer conexión con ninguno de los puertos detectados\n    at TransbankService.autoconnect (/opt/lampp/htdocs/backTransbank-1/src/services/transbankService.js:50:13)","timestamp":"2025-04-22 15:38:36"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 15:38:49"}
+{"level":"info","message":"Iniciando transacción - Monto: 10000, Ticket: 357311EFUT","timestamp":"2025-04-22 15:38:49"}
+{"level":"error","message":"Error durante la venta: You have to connect to a POS to send this message: 0200|000010000|357311|0|1","stack":"Error: You have to connect to a POS to send this message: 0200|000010000|357311|0|1\n    at /opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/dist/transbank.js:1:8024\n    at new Promise (<anonymous>)\n    at e.exports.send (/opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/dist/transbank.js:1:7975)\n    at e.exports.sale (/opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/dist/transbank.js:1:3062)\n    at TransbankService.sendSaleCommand (/opt/lampp/htdocs/backTransbank-1/src/services/transbankService.js:76:39)\n    at exports.processPayment (/opt/lampp/htdocs/backTransbank-1/src/controllers/paymentController.js:19:43)\n    at Layer.handleRequest (/opt/lampp/htdocs/backTransbank-1/node_modules/router/lib/layer.js:152:17)\n    at next (/opt/lampp/htdocs/backTransbank-1/node_modules/router/lib/route.js:157:13)\n    at Route.dispatch (/opt/lampp/htdocs/backTransbank-1/node_modules/router/lib/route.js:117:3)\n    at handle (/opt/lampp/htdocs/backTransbank-1/node_modules/router/index.js:435:11)","timestamp":"2025-04-22 15:38:49"}
+{"level":"error","message":"Error en transacción: You have to connect to a POS to send this message: 0200|000010000|357311|0|1","stack":"Error: You have to connect to a POS to send this message: 0200|000010000|357311|0|1\n    at /opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/dist/transbank.js:1:8024\n    at new Promise (<anonymous>)\n    at e.exports.send (/opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/dist/transbank.js:1:7975)\n    at e.exports.sale (/opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/dist/transbank.js:1:3062)\n    at TransbankService.sendSaleCommand (/opt/lampp/htdocs/backTransbank-1/src/services/transbankService.js:76:39)\n    at exports.processPayment (/opt/lampp/htdocs/backTransbank-1/src/controllers/paymentController.js:19:43)\n    at Layer.handleRequest (/opt/lampp/htdocs/backTransbank-1/node_modules/router/lib/layer.js:152:17)\n    at next (/opt/lampp/htdocs/backTransbank-1/node_modules/router/lib/route.js:157:13)\n    at Route.dispatch (/opt/lampp/htdocs/backTransbank-1/node_modules/router/lib/route.js:117:3)\n    at handle (/opt/lampp/htdocs/backTransbank-1/node_modules/router/index.js:435:11)","timestamp":"2025-04-22 15:38:49"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 15:39:02"}
+{"level":"info","message":"Iniciando transacción - Monto: 10000, Ticket: 357311EFUT","timestamp":"2025-04-22 15:39:02"}
+{"level":"error","message":"Error durante la venta: You have to connect to a POS to send this message: 0200|000010000|357311|0|1","stack":"Error: You have to connect to a POS to send this message: 0200|000010000|357311|0|1\n    at /opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/dist/transbank.js:1:8024\n    at new Promise (<anonymous>)\n    at e.exports.send (/opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/dist/transbank.js:1:7975)\n    at e.exports.sale (/opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/dist/transbank.js:1:3062)\n    at TransbankService.sendSaleCommand (/opt/lampp/htdocs/backTransbank-1/src/services/transbankService.js:76:39)\n    at exports.processPayment (/opt/lampp/htdocs/backTransbank-1/src/controllers/paymentController.js:19:43)\n    at Layer.handleRequest (/opt/lampp/htdocs/backTransbank-1/node_modules/router/lib/layer.js:152:17)\n    at next (/opt/lampp/htdocs/backTransbank-1/node_modules/router/lib/route.js:157:13)\n    at Route.dispatch (/opt/lampp/htdocs/backTransbank-1/node_modules/router/lib/route.js:117:3)\n    at handle (/opt/lampp/htdocs/backTransbank-1/node_modules/router/index.js:435:11)","timestamp":"2025-04-22 15:39:02"}
+{"level":"error","message":"Error en transacción: You have to connect to a POS to send this message: 0200|000010000|357311|0|1","stack":"Error: You have to connect to a POS to send this message: 0200|000010000|357311|0|1\n    at /opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/dist/transbank.js:1:8024\n    at new Promise (<anonymous>)\n    at e.exports.send (/opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/dist/transbank.js:1:7975)\n    at e.exports.sale (/opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/dist/transbank.js:1:3062)\n    at TransbankService.sendSaleCommand (/opt/lampp/htdocs/backTransbank-1/src/services/transbankService.js:76:39)\n    at exports.processPayment (/opt/lampp/htdocs/backTransbank-1/src/controllers/paymentController.js:19:43)\n    at Layer.handleRequest (/opt/lampp/htdocs/backTransbank-1/node_modules/router/lib/layer.js:152:17)\n    at next (/opt/lampp/htdocs/backTransbank-1/node_modules/router/lib/route.js:157:13)\n    at Route.dispatch (/opt/lampp/htdocs/backTransbank-1/node_modules/router/lib/route.js:117:3)\n    at handle (/opt/lampp/htdocs/backTransbank-1/node_modules/router/index.js:435:11)","timestamp":"2025-04-22 15:39:02"}
+{"level":"info","message":"Iniciando servidor en modo production","timestamp":"2025-04-22 15:39:34"}
+{"level":"info","message":"Servidor Transbank POS escuchando en puerto 3000","timestamp":"2025-04-22 15:39:34"}
+{"level":"warn","message":"No se pudo conectar a /dev/ttyACM0: ACK has not been received in 2000 ms.","timestamp":"2025-04-22 15:39:37"}
+{"level":"warn","message":"No se pudo conectar a /dev/ttyACM1: ACK has not been received in 2000 ms.","timestamp":"2025-04-22 15:39:39"}
+{"level":"error","message":"Error en autoconnect(): No fue posible establecer conexión con ninguno de los puertos detectados","stack":"Error: No fue posible establecer conexión con ninguno de los puertos detectados\n    at TransbankService.autoconnect (/opt/lampp/htdocs/backTransbank-1/src/services/transbankService.js:50:13)","timestamp":"2025-04-22 15:39:39"}
+{"level":"error","message":"Error en conexión automática con POS: No fue posible establecer conexión con ninguno de los puertos detectados","stack":"Error: No fue posible establecer conexión con ninguno de los puertos detectados\n    at TransbankService.autoconnect (/opt/lampp/htdocs/backTransbank-1/src/services/transbankService.js:50:13)","timestamp":"2025-04-22 15:39:39"}
+{"level":"info","message":"Recibida señal SIGINT. Cerrando servidor...","timestamp":"2025-04-22 15:40:06"}
+{"level":"info","message":"Iniciando servidor en modo production","timestamp":"2025-04-22 15:40:21"}
+{"level":"info","message":"Servidor Transbank POS escuchando en puerto 3000","timestamp":"2025-04-22 15:40:21"}
+{"level":"warn","message":"No se pudo conectar a /dev/ttyACM0: ACK has not been received in 2000 ms.","timestamp":"2025-04-22 15:40:23"}
+{"level":"warn","message":"No se pudo conectar a /dev/ttyACM1: ACK has not been received in 2000 ms.","timestamp":"2025-04-22 15:40:25"}
+{"level":"error","message":"Error en autoconnect(): No fue posible establecer conexión con ninguno de los puertos detectados","stack":"Error: No fue posible establecer conexión con ninguno de los puertos detectados\n    at TransbankService.autoconnect (/opt/lampp/htdocs/backTransbank-1/src/services/transbankService.js:50:13)","timestamp":"2025-04-22 15:40:25"}
+{"level":"error","message":"Error en conexión automática con POS: No fue posible establecer conexión con ninguno de los puertos detectados","stack":"Error: No fue posible establecer conexión con ninguno de los puertos detectados\n    at TransbankService.autoconnect (/opt/lampp/htdocs/backTransbank-1/src/services/transbankService.js:50:13)","timestamp":"2025-04-22 15:40:25"}
+{"level":"info","message":"Iniciando servidor en modo production","timestamp":"2025-04-22 15:41:36"}
+{"level":"info","message":"Servidor Transbank POS escuchando en puerto 3000","timestamp":"2025-04-22 15:41:36"}
+{"level":"warn","message":"No se pudo conectar a /dev/ttyACM0: ACK has not been received in 2000 ms.","timestamp":"2025-04-22 15:41:38"}
+{"level":"warn","message":"No se pudo conectar a /dev/ttyACM1: ACK has not been received in 2000 ms.","timestamp":"2025-04-22 15:41:40"}
+{"level":"error","message":"Error en autoconnect(): No fue posible establecer conexión con ninguno de los puertos detectados","stack":"Error: No fue posible establecer conexión con ninguno de los puertos detectados\n    at TransbankService.autoconnect (/opt/lampp/htdocs/backTransbank-1/src/services/transbankService.js:50:13)","timestamp":"2025-04-22 15:41:40"}
+{"level":"error","message":"Error en conexión automática con POS: No fue posible establecer conexión con ninguno de los puertos detectados","stack":"Error: No fue posible establecer conexión con ninguno de los puertos detectados\n    at TransbankService.autoconnect (/opt/lampp/htdocs/backTransbank-1/src/services/transbankService.js:50:13)","timestamp":"2025-04-22 15:41:40"}
+{"level":"info","message":"Recibida señal SIGINT. Cerrando servidor...","timestamp":"2025-04-22 15:42:14"}
+{"level":"info","message":"Iniciando servidor en modo production","timestamp":"2025-04-22 15:42:51"}
+{"level":"info","message":"Servidor Transbank POS escuchando en puerto 3000","timestamp":"2025-04-22 15:42:51"}
+{"level":"info","message":"Conectado automáticamente al POS en /dev/ttyACM0","timestamp":"2025-04-22 15:42:51"}
+{"level":"info","message":"Conexión establecida con POS en /dev/ttyACM0","timestamp":"2025-04-22 15:42:51"}
+{"level":"info","message":"Commerce Code: tu_codigo_comercio","timestamp":"2025-04-22 15:42:51"}
+{"level":"info","message":"Terminal ID: IM750193","timestamp":"2025-04-22 15:42:51"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 15:43:22"}
+{"level":"info","message":"Iniciando transacción - Monto: 10000, Ticket: 357311EFUT","timestamp":"2025-04-22 15:43:22"}
+{"level":"error","message":"Error durante la venta: ACK has not been received in 2000 ms.","stack":"Error: ACK has not been received in 2000 ms.\n    at Timeout._onTimeout (/opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/dist/transbank.js:1:8305)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)","timestamp":"2025-04-22 15:43:24"}
+{"level":"error","message":"Error en transacción: ACK has not been received in 2000 ms.","stack":"Error: ACK has not been received in 2000 ms.\n    at Timeout._onTimeout (/opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/dist/transbank.js:1:8305)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)","timestamp":"2025-04-22 15:43:24"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 15:43:26"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: B987654321","timestamp":"2025-04-22 15:43:26"}
+{"level":"error","message":"Error durante la venta: ACK has not been received in 2000 ms.","stack":"Error: ACK has not been received in 2000 ms.\n    at Timeout._onTimeout (/opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/dist/transbank.js:1:8305)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)","timestamp":"2025-04-22 15:43:28"}
+{"level":"error","message":"Error en transacción: ACK has not been received in 2000 ms.","stack":"Error: ACK has not been received in 2000 ms.\n    at Timeout._onTimeout (/opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/dist/transbank.js:1:8305)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)","timestamp":"2025-04-22 15:43:28"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 15:43:41"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: B987654321","timestamp":"2025-04-22 15:43:41"}
+{"level":"error","message":"Error durante la venta: ACK has not been received in 2000 ms.","stack":"Error: ACK has not been received in 2000 ms.\n    at Timeout._onTimeout (/opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/dist/transbank.js:1:8305)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)","timestamp":"2025-04-22 15:43:43"}
+{"level":"error","message":"Error en transacción: ACK has not been received in 2000 ms.","stack":"Error: ACK has not been received in 2000 ms.\n    at Timeout._onTimeout (/opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/dist/transbank.js:1:8305)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)","timestamp":"2025-04-22 15:43:43"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 15:43:52"}
+{"level":"info","message":"Iniciando transacción - Monto: 10000, Ticket: 357311EFUT","timestamp":"2025-04-22 15:43:52"}
+{"level":"error","message":"Error durante la venta: ACK has not been received in 2000 ms.","stack":"Error: ACK has not been received in 2000 ms.\n    at Timeout._onTimeout (/opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/dist/transbank.js:1:8305)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)","timestamp":"2025-04-22 15:43:54"}
+{"level":"error","message":"Error en transacción: ACK has not been received in 2000 ms.","stack":"Error: ACK has not been received in 2000 ms.\n    at Timeout._onTimeout (/opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/dist/transbank.js:1:8305)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)","timestamp":"2025-04-22 15:43:54"}
+{"level":"info","message":"GET /api/terminal/status","timestamp":"2025-04-22 15:43:55"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 15:44:30"}
+{"level":"info","message":"Iniciando transacción - Monto: 10000, Ticket: 357311EFUT","timestamp":"2025-04-22 15:44:30"}
+{"level":"info","message":"Venta exitosa - Operación: undefined","timestamp":"2025-04-22 15:44:30"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 15:44:30"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 15:45:26"}
+{"level":"info","message":"Iniciando transacción - Monto: 10000, Ticket: 357311EFUT","timestamp":"2025-04-22 15:45:26"}
+{"level":"info","message":"Venta exitosa - Operación: undefined","timestamp":"2025-04-22 15:45:56"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 15:45:56"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 15:46:24"}
+{"level":"info","message":"Iniciando transacción - Monto: 10000, Ticket: 357311EFUT","timestamp":"2025-04-22 15:46:24"}
+{"level":"info","message":"Venta exitosa - Operación: undefined","timestamp":"2025-04-22 15:46:49"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 15:46:49"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 15:49:32"}
+{"level":"error","message":"Error en transacción: Número de ticket/boleta inválido","stack":"Error: Número de ticket/boleta inválido\n    at exports.processPayment (/opt/lampp/htdocs/backTransbank-1/src/controllers/paymentController.js:14:13)\n    at Layer.handleRequest (/opt/lampp/htdocs/backTransbank-1/node_modules/router/lib/layer.js:152:17)\n    at next (/opt/lampp/htdocs/backTransbank-1/node_modules/router/lib/route.js:157:13)\n    at Route.dispatch (/opt/lampp/htdocs/backTransbank-1/node_modules/router/lib/route.js:117:3)\n    at handle (/opt/lampp/htdocs/backTransbank-1/node_modules/router/index.js:435:11)\n    at Layer.handleRequest (/opt/lampp/htdocs/backTransbank-1/node_modules/router/lib/layer.js:152:17)\n    at /opt/lampp/htdocs/backTransbank-1/node_modules/router/index.js:295:15\n    at processParams (/opt/lampp/htdocs/backTransbank-1/node_modules/router/index.js:582:12)\n    at next (/opt/lampp/htdocs/backTransbank-1/node_modules/router/index.js:291:5)\n    at /opt/lampp/htdocs/backTransbank-1/src/app.js:24:3","timestamp":"2025-04-22 15:49:32"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 15:50:48"}
+{"level":"info","message":"Iniciando transacción - Monto: 10000, Ticket: 041650TCHT","timestamp":"2025-04-22 15:50:48"}
+{"level":"info","message":"Venta exitosa - Operación: undefined","timestamp":"2025-04-22 15:51:08"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 15:51:08"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 15:52:20"}
+{"level":"info","message":"Iniciando transacción - Monto: 10000, Ticket: 041650TCHT","timestamp":"2025-04-22 15:52:20"}
+{"level":"info","message":"Venta exitosa - Operación: undefined","timestamp":"2025-04-22 15:52:24"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 15:52:24"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 15:53:53"}
+{"level":"info","message":"Iniciando transacción - Monto: 10000, Ticket: 041650TCHT","timestamp":"2025-04-22 15:53:53"}
+{"level":"info","message":"Venta exitosa - Operación: undefined","timestamp":"2025-04-22 15:53:57"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 15:53:57"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 15:57:00"}
+{"level":"info","message":"Iniciando transacción - Monto: 10000, Ticket: 041650TCHT","timestamp":"2025-04-22 15:57:00"}
+{"0":"r","1":"e","2":"a","3":"s","4":"o","5":"n","6":":","level":"error","message":"Unhandled Rejection at:","timestamp":"2025-04-22 15:57:00"}
+{"level":"info","message":"Recibida señal unhandledRejection. Cerrando servidor...","timestamp":"2025-04-22 15:57:00"}
+{"level":"error","message":"Error durante la venta: ACK has not been received in 2000 ms.","stack":"Error: ACK has not been received in 2000 ms.\n    at Timeout._onTimeout (/opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/dist/transbank.js:1:8305)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)","timestamp":"2025-04-22 15:57:02"}
+{"level":"error","message":"Error en transacción: ACK has not been received in 2000 ms.","stack":"Error: ACK has not been received in 2000 ms.\n    at Timeout._onTimeout (/opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/dist/transbank.js:1:8305)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)","timestamp":"2025-04-22 15:57:02"}
+{"level":"error","message":"Error durante el shutdown: Timeout cerrando servidor","stack":"Error: Timeout cerrando servidor\n    at Timeout._onTimeout (/opt/lampp/htdocs/backTransbank-1/src/server.js:102:37)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)","timestamp":"2025-04-22 15:57:05"}
+{"level":"info","message":"Iniciando servidor en modo production","timestamp":"2025-04-22 15:57:13"}
+{"level":"info","message":"Servidor Transbank POS escuchando en puerto 3000","timestamp":"2025-04-22 15:57:13"}
+{"level":"info","message":"Conectado automáticamente al POS en /dev/ttyACM0","timestamp":"2025-04-22 15:57:13"}
+{"level":"info","message":"Conexión establecida con POS en /dev/ttyACM0","timestamp":"2025-04-22 15:57:13"}
+{"level":"info","message":"Commerce Code: tu_codigo_comercio","timestamp":"2025-04-22 15:57:13"}
+{"level":"info","message":"Terminal ID: IM750193","timestamp":"2025-04-22 15:57:13"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 15:57:17"}
+{"level":"info","message":"Iniciando transacción - Monto: 10000, Ticket: 041650TCHT","timestamp":"2025-04-22 15:57:17"}
+{"level":"info","message":"Venta exitosa - Operación: undefined","timestamp":"2025-04-22 15:57:24"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 15:57:24"}
+{"level":"info","message":"Iniciando servidor en modo production","timestamp":"2025-04-22 16:03:59"}
+{"level":"info","message":"Servidor Transbank POS escuchando en puerto 3000","timestamp":"2025-04-22 16:03:59"}
+{"level":"info","message":"Conectado automáticamente al POS en /dev/ttyACM1","timestamp":"2025-04-22 16:03:59"}
+{"level":"info","message":"Conexión establecida con POS en /dev/ttyACM1","timestamp":"2025-04-22 16:03:59"}
+{"level":"info","message":"Commerce Code: tu_codigo_comercio","timestamp":"2025-04-22 16:03:59"}
+{"level":"info","message":"Terminal ID: IM750193","timestamp":"2025-04-22 16:03:59"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 16:04:08"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: B987654321","timestamp":"2025-04-22 16:04:08"}
+{"level":"info","message":"Venta exitosa - Operación: undefined","timestamp":"2025-04-22 16:04:17"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 16:04:17"}
+{"level":"info","message":"Recibida señal SIGINT. Cerrando servidor...","timestamp":"2025-04-22 16:12:06"}
+{"level":"info","message":"Servidor HTTP cerrado","timestamp":"2025-04-22 16:12:06"}
+{"level":"info","message":"Iniciando servidor en modo production","timestamp":"2025-04-22 16:12:09"}
+{"level":"info","message":"Servidor Transbank POS escuchando en puerto 3000","timestamp":"2025-04-22 16:12:09"}
+{"level":"warn","message":"No se pudo conectar a /dev/ttyACM1: ACK has not been received in 2000 ms.","timestamp":"2025-04-22 16:12:11"}
+{"level":"warn","message":"No se pudo conectar a /dev/ttyACM2: ACK has not been received in 2000 ms.","timestamp":"2025-04-22 16:12:13"}
+{"level":"error","message":"Error en autoconnect(): No fue posible establecer conexión con ninguno de los puertos detectados","stack":"Error: No fue posible establecer conexión con ninguno de los puertos detectados\n    at TransbankService.autoconnect (/opt/lampp/htdocs/backTransbank-1/src/services/transbankService.js:46:13)","timestamp":"2025-04-22 16:12:13"}
+{"level":"error","message":"Error en conexión automática con POS: No fue posible establecer conexión con ninguno de los puertos detectados","stack":"Error: No fue posible establecer conexión con ninguno de los puertos detectados\n    at TransbankService.autoconnect (/opt/lampp/htdocs/backTransbank-1/src/services/transbankService.js:46:13)","timestamp":"2025-04-22 16:12:13"}
+{"level":"info","message":"Recibida señal SIGINT. Cerrando servidor...","timestamp":"2025-04-22 16:12:20"}
+{"level":"info","message":"Iniciando servidor en modo production","timestamp":"2025-04-22 16:12:26"}
+{"level":"info","message":"Servidor Transbank POS escuchando en puerto 3000","timestamp":"2025-04-22 16:12:26"}
+{"level":"info","message":"Conectado automáticamente al POS en /dev/ttyACM1","timestamp":"2025-04-22 16:12:27"}
+{"level":"info","message":"Conexión establecida con POS en /dev/ttyACM1","timestamp":"2025-04-22 16:12:27"}
+{"level":"info","message":"Commerce Code: tu_codigo_comercio","timestamp":"2025-04-22 16:12:27"}
+{"level":"info","message":"Terminal ID: IM750193","timestamp":"2025-04-22 16:12:27"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 16:13:18"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: B987654321","timestamp":"2025-04-22 16:13:18"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: B9876543210000000000, Voucher: false","timestamp":"2025-04-22 16:13:18"}
+{"level":"info","message":"Venta exitosa - Operación: undefined","timestamp":"2025-04-22 16:13:23"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 16:13:23"}
+{"level":"info","message":"GET /api/terminal/status","timestamp":"2025-04-22 16:18:27"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 16:18:58"}
+{"level":"error","message":"Error en transacción: Número de ticket/boleta inválido","stack":"Error: Número de ticket/boleta inválido\n    at exports.processPayment (/opt/lampp/htdocs/backTransbank-1/src/controllers/paymentController.js:14:13)\n    at Layer.handleRequest (/opt/lampp/htdocs/backTransbank-1/node_modules/router/lib/layer.js:152:17)\n    at next (/opt/lampp/htdocs/backTransbank-1/node_modules/router/lib/route.js:157:13)\n    at Route.dispatch (/opt/lampp/htdocs/backTransbank-1/node_modules/router/lib/route.js:117:3)\n    at handle (/opt/lampp/htdocs/backTransbank-1/node_modules/router/index.js:435:11)\n    at Layer.handleRequest (/opt/lampp/htdocs/backTransbank-1/node_modules/router/lib/layer.js:152:17)\n    at /opt/lampp/htdocs/backTransbank-1/node_modules/router/index.js:295:15\n    at processParams (/opt/lampp/htdocs/backTransbank-1/node_modules/router/index.js:582:12)\n    at next (/opt/lampp/htdocs/backTransbank-1/node_modules/router/index.js:291:5)\n    at /opt/lampp/htdocs/backTransbank-1/src/app.js:24:3","timestamp":"2025-04-22 16:18:58"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 16:19:37"}
+{"level":"error","message":"Error en transacción: Número de ticket/boleta inválido","stack":"Error: Número de ticket/boleta inválido\n    at exports.processPayment (/opt/lampp/htdocs/backTransbank-1/src/controllers/paymentController.js:14:13)\n    at Layer.handleRequest (/opt/lampp/htdocs/backTransbank-1/node_modules/router/lib/layer.js:152:17)\n    at next (/opt/lampp/htdocs/backTransbank-1/node_modules/router/lib/route.js:157:13)\n    at Route.dispatch (/opt/lampp/htdocs/backTransbank-1/node_modules/router/lib/route.js:117:3)\n    at handle (/opt/lampp/htdocs/backTransbank-1/node_modules/router/index.js:435:11)\n    at Layer.handleRequest (/opt/lampp/htdocs/backTransbank-1/node_modules/router/lib/layer.js:152:17)\n    at /opt/lampp/htdocs/backTransbank-1/node_modules/router/index.js:295:15\n    at processParams (/opt/lampp/htdocs/backTransbank-1/node_modules/router/index.js:582:12)\n    at next (/opt/lampp/htdocs/backTransbank-1/node_modules/router/index.js:291:5)\n    at /opt/lampp/htdocs/backTransbank-1/src/app.js:24:3","timestamp":"2025-04-22 16:19:37"}
+{"level":"info","message":"Iniciando servidor en modo production","timestamp":"2025-04-22 16:22:15"}
+{"level":"info","message":"Servidor Transbank POS escuchando en puerto 3000","timestamp":"2025-04-22 16:22:15"}
+{"level":"info","message":"Conectado automáticamente al POS en /dev/ttyACM0","timestamp":"2025-04-22 16:22:15"}
+{"level":"info","message":"Conexión establecida con POS en /dev/ttyACM0","timestamp":"2025-04-22 16:22:15"}
+{"level":"info","message":"Commerce Code: tu_codigo_comercio","timestamp":"2025-04-22 16:22:15"}
+{"level":"info","message":"Terminal ID: IM750193","timestamp":"2025-04-22 16:22:15"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 16:22:30"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 052856BWBL","timestamp":"2025-04-22 16:22:30"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 052856BWBL0000000000, Voucher: true","timestamp":"2025-04-22 16:22:30"}
+{"level":"info","message":"Venta exitosa - Operación: undefined","timestamp":"2025-04-22 16:22:39"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 16:22:39"}
+{"level":"info","message":"Iniciando servidor en modo production","timestamp":"2025-04-22 16:27:43"}
+{"level":"info","message":"Servidor Transbank POS escuchando en puerto 3000","timestamp":"2025-04-22 16:27:43"}
+{"level":"info","message":"Conectado automáticamente al POS en /dev/ttyACM1","timestamp":"2025-04-22 16:27:43"}
+{"level":"info","message":"Conexión establecida con POS en /dev/ttyACM1","timestamp":"2025-04-22 16:27:43"}
+{"level":"info","message":"Commerce Code: tu_codigo_comercio","timestamp":"2025-04-22 16:27:43"}
+{"level":"info","message":"Terminal ID: IM750193","timestamp":"2025-04-22 16:27:43"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 16:27:47"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 052856BWBL","timestamp":"2025-04-22 16:27:47"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 052856BWBL0000000000, Voucher: true","timestamp":"2025-04-22 16:27:47"}
+{"level":"info","message":"Venta exitosa - Operación: undefined","timestamp":"2025-04-22 16:27:51"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 16:27:51"}
+{"level":"info","message":"GET /api/terminal/status","timestamp":"2025-04-22 16:30:28"}
+{"level":"info","message":"Iniciando servidor en modo production","timestamp":"2025-04-22 16:30:51"}
+{"level":"info","message":"Servidor Transbank POS escuchando en puerto 3000","timestamp":"2025-04-22 16:30:51"}
+{"level":"info","message":"Conectado automáticamente al POS en /dev/ttyACM0","timestamp":"2025-04-22 16:30:51"}
+{"level":"info","message":"Conexión establecida con POS en /dev/ttyACM0","timestamp":"2025-04-22 16:30:51"}
+{"level":"info","message":"Commerce Code: tu_codigo_comercio","timestamp":"2025-04-22 16:30:51"}
+{"level":"info","message":"Terminal ID: IM750193","timestamp":"2025-04-22 16:30:51"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 16:30:55"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 052856BWBL","timestamp":"2025-04-22 16:30:55"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 052856BWBL0000000000, Voucher: true","timestamp":"2025-04-22 16:30:55"}
+{"level":"info","message":"Venta exitosa - Operación: undefined","timestamp":"2025-04-22 16:30:59"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 16:30:59"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 16:31:31"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: B987654321","timestamp":"2025-04-22 16:31:31"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: B9876543210000000000, Voucher: false","timestamp":"2025-04-22 16:31:31"}
+{"level":"info","message":"Venta exitosa - Operación: undefined","timestamp":"2025-04-22 16:31:35"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 16:31:35"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 16:32:18"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 052856BWBL","timestamp":"2025-04-22 16:32:18"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 052856BWBL0000000000, Voucher: true","timestamp":"2025-04-22 16:32:18"}
+{"level":"info","message":"Venta exitosa - Operación: undefined","timestamp":"2025-04-22 16:32:22"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 16:32:22"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 16:32:39"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 052856BWBL","timestamp":"2025-04-22 16:32:39"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 052856BWBL0000000000, Voucher: true","timestamp":"2025-04-22 16:32:39"}
+{"level":"info","message":"Venta exitosa - Operación: undefined","timestamp":"2025-04-22 16:32:42"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 16:32:42"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 16:32:53"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 052856BWBL","timestamp":"2025-04-22 16:32:53"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 052856BWBL0000000000, Voucher: true","timestamp":"2025-04-22 16:32:53"}
+{"level":"info","message":"Venta exitosa - Operación: undefined","timestamp":"2025-04-22 16:32:57"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 16:32:57"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 16:34:42"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 435113CAYM","timestamp":"2025-04-22 16:34:42"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 435113CAYM0000000000, Voucher: true","timestamp":"2025-04-22 16:34:42"}
+{"0":"r","1":"e","2":"a","3":"s","4":"o","5":"n","6":":","level":"error","message":"Unhandled Rejection at:","timestamp":"2025-04-22 16:34:42"}
+{"level":"info","message":"Recibida señal unhandledRejection. Cerrando servidor...","timestamp":"2025-04-22 16:34:42"}
+{"level":"error","message":"Error durante la venta: ACK has not been received in 2000 ms.","stack":"Error: ACK has not been received in 2000 ms.\n    at Timeout._onTimeout (/opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/dist/transbank.js:1:8305)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)","timestamp":"2025-04-22 16:34:44"}
+{"level":"error","message":"Error en transacción: ACK has not been received in 2000 ms.","stack":"Error: ACK has not been received in 2000 ms.\n    at Timeout._onTimeout (/opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/dist/transbank.js:1:8305)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)","timestamp":"2025-04-22 16:34:44"}
+{"level":"error","message":"Error durante el shutdown: Timeout cerrando servidor","stack":"Error: Timeout cerrando servidor\n    at Timeout._onTimeout (/opt/lampp/htdocs/backTransbank-1/src/server.js:102:37)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)","timestamp":"2025-04-22 16:34:47"}
+{"level":"info","message":"Iniciando servidor en modo production","timestamp":"2025-04-22 16:39:48"}
+{"level":"info","message":"Servidor Transbank POS escuchando en puerto 3000","timestamp":"2025-04-22 16:39:48"}
+{"level":"info","message":"Conectado automáticamente al POS en /dev/ttyACM1","timestamp":"2025-04-22 16:39:49"}
+{"level":"info","message":"Conexión establecida con POS en /dev/ttyACM1","timestamp":"2025-04-22 16:39:49"}
+{"level":"info","message":"Commerce Code: tu_codigo_comercio","timestamp":"2025-04-22 16:39:49"}
+{"level":"info","message":"Terminal ID: IM750193","timestamp":"2025-04-22 16:39:49"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 16:40:13"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 008826AGBG","timestamp":"2025-04-22 16:40:13"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 008826AGBG0000000000, Voucher: true","timestamp":"2025-04-22 16:40:13"}
+{"level":"info","message":"Venta exitosa - Operación: desconocida","timestamp":"2025-04-22 16:40:18"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 16:40:18"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 16:40:34"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 008826AGBG","timestamp":"2025-04-22 16:40:34"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 008826AGBG0000000000, Voucher: true","timestamp":"2025-04-22 16:40:34"}
+{"level":"info","message":"Venta exitosa - Operación: desconocida","timestamp":"2025-04-22 16:40:40"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 16:40:40"}
+{"level":"info","message":"Recibida señal SIGINT. Cerrando servidor...","timestamp":"2025-04-22 16:41:50"}
+{"level":"info","message":"Servidor HTTP cerrado","timestamp":"2025-04-22 16:41:50"}
+{"level":"info","message":"Iniciando servidor en modo production","timestamp":"2025-04-22 16:41:52"}
+{"level":"info","message":"Servidor Transbank POS escuchando en puerto 3000","timestamp":"2025-04-22 16:41:52"}
+{"level":"info","message":"Conectado automáticamente al POS en /dev/ttyACM1","timestamp":"2025-04-22 16:41:52"}
+{"level":"info","message":"Conexión establecida con POS en /dev/ttyACM1","timestamp":"2025-04-22 16:41:52"}
+{"level":"info","message":"Commerce Code: tu_codigo_comercio","timestamp":"2025-04-22 16:41:52"}
+{"level":"info","message":"Terminal ID: IM750193","timestamp":"2025-04-22 16:41:52"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 16:43:00"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 008826AGBG","timestamp":"2025-04-22 16:43:00"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 008826AGBG0000000000, Voucher: true","timestamp":"2025-04-22 16:43:00"}
+{"level":"info","message":"Venta exitosa - Operación: desconocida","timestamp":"2025-04-22 16:43:03"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 16:43:03"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 16:43:36"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 008826AGBG","timestamp":"2025-04-22 16:43:36"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 008826AGBG0000000000, Voucher: true","timestamp":"2025-04-22 16:43:36"}
+{"level":"error","message":"Unhandled Rejection:","reason":"Cannot read properties of undefined (reading 'debug')","stack":"TypeError: Cannot read properties of undefined (reading 'debug')\n    at /opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/dist/transbank.js:1:8590\n    at onwriteError (node:internal/streams/writable:418:3)\n    at onwrite (node:internal/streams/writable:460:7)\n    at /opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/node_modules/@serialport/stream/dist/index.js:170:13","timestamp":"2025-04-22 16:43:36"}
+{"level":"info","message":"Recibida señal unhandledRejection. Cerrando servidor...","timestamp":"2025-04-22 16:43:36"}
+{"level":"error","message":"Error durante la venta: ACK has not been received in 2000 ms.","stack":"Error: ACK has not been received in 2000 ms.\n    at Timeout._onTimeout (/opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/dist/transbank.js:1:8305)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)","timestamp":"2025-04-22 16:43:38"}
+{"level":"error","message":"Error en transacción: ACK has not been received in 2000 ms.","stack":"Error: ACK has not been received in 2000 ms.\n    at Timeout._onTimeout (/opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/dist/transbank.js:1:8305)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)","timestamp":"2025-04-22 16:43:38"}
+{"level":"error","message":"Error durante el shutdown: Timeout cerrando servidor","stack":"Error: Timeout cerrando servidor\n    at Timeout._onTimeout (/opt/lampp/htdocs/backTransbank-1/src/server.js:96:37)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)","timestamp":"2025-04-22 16:43:41"}
+{"level":"info","message":"Iniciando servidor en modo production","timestamp":"2025-04-22 16:43:44"}
+{"level":"info","message":"Servidor Transbank POS escuchando en puerto 3000","timestamp":"2025-04-22 16:43:44"}
+{"level":"info","message":"Conectado automáticamente al POS en /dev/ttyACM0","timestamp":"2025-04-22 16:43:44"}
+{"level":"info","message":"Conexión establecida con POS en /dev/ttyACM0","timestamp":"2025-04-22 16:43:44"}
+{"level":"info","message":"Commerce Code: tu_codigo_comercio","timestamp":"2025-04-22 16:43:44"}
+{"level":"info","message":"Terminal ID: IM750193","timestamp":"2025-04-22 16:43:44"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 16:44:01"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 008826AGBG","timestamp":"2025-04-22 16:44:01"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 008826AGBG0000000000, Voucher: true","timestamp":"2025-04-22 16:44:01"}
+{"level":"info","message":"Venta exitosa - Operación: desconocida","timestamp":"2025-04-22 16:44:02"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 16:44:02"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 16:45:17"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 008826AGBG","timestamp":"2025-04-22 16:45:17"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 008826AGBG0000000000, Voucher: true","timestamp":"2025-04-22 16:45:17"}
+{"level":"info","message":"Venta exitosa - Operación: desconocida","timestamp":"2025-04-22 16:45:22"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 16:45:22"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 16:45:25"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 008826AGBG","timestamp":"2025-04-22 16:45:26"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 008826AGBG0000000000, Voucher: true","timestamp":"2025-04-22 16:45:26"}
+{"level":"info","message":"Venta exitosa - Operación: desconocida","timestamp":"2025-04-22 16:45:30"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 16:45:30"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 16:45:34"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 008826AGBG","timestamp":"2025-04-22 16:45:34"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 008826AGBG0000000000, Voucher: true","timestamp":"2025-04-22 16:45:34"}
+{"level":"info","message":"Venta exitosa - Operación: desconocida","timestamp":"2025-04-22 16:45:38"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 16:45:38"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 16:46:01"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 553775LFDY","timestamp":"2025-04-22 16:46:01"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 553775LFDY0000000000, Voucher: true","timestamp":"2025-04-22 16:46:01"}
+{"level":"error","message":"Unhandled Rejection:","reason":"Cannot read properties of undefined (reading 'debug')","stack":"TypeError: Cannot read properties of undefined (reading 'debug')\n    at /opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/dist/transbank.js:1:8590\n    at onwriteError (node:internal/streams/writable:418:3)\n    at onwrite (node:internal/streams/writable:460:7)\n    at /opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/node_modules/@serialport/stream/dist/index.js:170:13","timestamp":"2025-04-22 16:46:01"}
+{"level":"info","message":"Recibida señal unhandledRejection. Cerrando servidor...","timestamp":"2025-04-22 16:46:01"}
+{"level":"error","message":"Error durante la venta: ACK has not been received in 2000 ms.","stack":"Error: ACK has not been received in 2000 ms.\n    at Timeout._onTimeout (/opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/dist/transbank.js:1:8305)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)","timestamp":"2025-04-22 16:46:03"}
+{"level":"error","message":"Error en transacción: ACK has not been received in 2000 ms.","stack":"Error: ACK has not been received in 2000 ms.\n    at Timeout._onTimeout (/opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/dist/transbank.js:1:8305)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)","timestamp":"2025-04-22 16:46:03"}
+{"level":"error","message":"Error durante el shutdown: Timeout cerrando servidor","stack":"Error: Timeout cerrando servidor\n    at Timeout._onTimeout (/opt/lampp/htdocs/backTransbank-1/src/server.js:96:37)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)","timestamp":"2025-04-22 16:46:06"}
+{"level":"info","message":"Iniciando servidor en modo production","timestamp":"2025-04-22 16:46:09"}
+{"level":"info","message":"Servidor Transbank POS escuchando en puerto 3000","timestamp":"2025-04-22 16:46:09"}
+{"level":"info","message":"Conectado automáticamente al POS en /dev/ttyACM1","timestamp":"2025-04-22 16:46:09"}
+{"level":"info","message":"Conexión establecida con POS en /dev/ttyACM1","timestamp":"2025-04-22 16:46:09"}
+{"level":"info","message":"Commerce Code: tu_codigo_comercio","timestamp":"2025-04-22 16:46:09"}
+{"level":"info","message":"Terminal ID: IM750193","timestamp":"2025-04-22 16:46:09"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 16:46:19"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 553775LFDY","timestamp":"2025-04-22 16:46:19"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 553775LFDY0000000000, Voucher: true","timestamp":"2025-04-22 16:46:19"}
+{"level":"info","message":"Venta exitosa - Operación: desconocida","timestamp":"2025-04-22 16:46:19"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 16:46:19"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 16:46:29"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 553775LFDY","timestamp":"2025-04-22 16:46:29"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 553775LFDY0000000000, Voucher: true","timestamp":"2025-04-22 16:46:29"}
+{"level":"error","message":"Unhandled Rejection:","reason":"Cannot read properties of undefined (reading 'debug')","stack":"TypeError: Cannot read properties of undefined (reading 'debug')\n    at /opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/dist/transbank.js:1:8590\n    at onwriteError (node:internal/streams/writable:418:3)\n    at onwrite (node:internal/streams/writable:460:7)\n    at /opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/node_modules/@serialport/stream/dist/index.js:170:13","timestamp":"2025-04-22 16:46:29"}
+{"level":"info","message":"Recibida señal unhandledRejection. Cerrando servidor...","timestamp":"2025-04-22 16:46:29"}
+{"level":"error","message":"Error durante la venta: ACK has not been received in 2000 ms.","stack":"Error: ACK has not been received in 2000 ms.\n    at Timeout._onTimeout (/opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/dist/transbank.js:1:8305)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)","timestamp":"2025-04-22 16:46:31"}
+{"level":"error","message":"Error en transacción: ACK has not been received in 2000 ms.","stack":"Error: ACK has not been received in 2000 ms.\n    at Timeout._onTimeout (/opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/dist/transbank.js:1:8305)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)","timestamp":"2025-04-22 16:46:31"}
+{"level":"error","message":"Error durante el shutdown: Timeout cerrando servidor","stack":"Error: Timeout cerrando servidor\n    at Timeout._onTimeout (/opt/lampp/htdocs/backTransbank-1/src/server.js:96:37)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)","timestamp":"2025-04-22 16:46:34"}
+{"level":"info","message":"Iniciando servidor en modo production","timestamp":"2025-04-22 16:46:45"}
+{"level":"info","message":"Servidor Transbank POS escuchando en puerto 3000","timestamp":"2025-04-22 16:46:45"}
+{"level":"info","message":"Conectado automáticamente al POS en /dev/ttyACM0","timestamp":"2025-04-22 16:46:46"}
+{"level":"info","message":"Conexión establecida con POS en /dev/ttyACM0","timestamp":"2025-04-22 16:46:46"}
+{"level":"info","message":"Commerce Code: tu_codigo_comercio","timestamp":"2025-04-22 16:46:46"}
+{"level":"info","message":"Terminal ID: IM750193","timestamp":"2025-04-22 16:46:46"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 16:47:06"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 553775LFDY","timestamp":"2025-04-22 16:47:06"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 553775LFDY0000000000, Voucher: true","timestamp":"2025-04-22 16:47:06"}
+{"level":"info","message":"Venta exitosa - Operación: desconocida","timestamp":"2025-04-22 16:47:12"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 16:47:12"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 16:47:16"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 553775LFDY","timestamp":"2025-04-22 16:47:16"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 553775LFDY0000000000, Voucher: true","timestamp":"2025-04-22 16:47:16"}
+{"level":"info","message":"Venta exitosa - Operación: desconocida","timestamp":"2025-04-22 16:47:20"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 16:47:20"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 16:48:19"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 813385KGIW","timestamp":"2025-04-22 16:48:19"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 813385KGIW0000000000, Voucher: true","timestamp":"2025-04-22 16:48:19"}
+{"level":"info","message":"Venta exitosa - Operación: desconocida","timestamp":"2025-04-22 16:48:23"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 16:48:23"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 16:48:26"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 813385KGIW","timestamp":"2025-04-22 16:48:26"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 813385KGIW0000000000, Voucher: true","timestamp":"2025-04-22 16:48:26"}
+{"level":"info","message":"Venta exitosa - Operación: desconocida","timestamp":"2025-04-22 16:48:29"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 16:48:29"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 16:48:37"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 813385KGIW","timestamp":"2025-04-22 16:48:37"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 813385KGIW0000000000, Voucher: true","timestamp":"2025-04-22 16:48:37"}
+{"level":"info","message":"Venta exitosa - Operación: desconocida","timestamp":"2025-04-22 16:49:07"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 16:49:07"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 16:54:14"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 813385KGIW","timestamp":"2025-04-22 16:54:14"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 813385KGIW0000000000, Voucher: true","timestamp":"2025-04-22 16:54:14"}
+{"level":"info","message":"Venta exitosa - Operación: desconocida","timestamp":"2025-04-22 16:54:14"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 16:54:14"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 16:54:26"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 813385KGIW","timestamp":"2025-04-22 16:54:26"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 813385KGIW0000000000, Voucher: true","timestamp":"2025-04-22 16:54:26"}
+{"level":"error","message":"Error durante la venta: ACK has not been received in 2000 ms.","stack":"Error: ACK has not been received in 2000 ms.\n    at Timeout._onTimeout (/opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/dist/transbank.js:1:8305)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)","timestamp":"2025-04-22 16:54:28"}
+{"level":"error","message":"Error en transacción: ACK has not been received in 2000 ms.","stack":"Error: ACK has not been received in 2000 ms.\n    at Timeout._onTimeout (/opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/dist/transbank.js:1:8305)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)","timestamp":"2025-04-22 16:54:28"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 16:55:32"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 813385KGIW","timestamp":"2025-04-22 16:55:32"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 813385KGIW0000000000, Voucher: true","timestamp":"2025-04-22 16:55:32"}
+{"level":"info","message":"Venta exitosa - Operación: desconocida","timestamp":"2025-04-22 16:55:32"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 16:55:32"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 16:55:48"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 813385KGIW","timestamp":"2025-04-22 16:55:48"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 813385KGIW0000000000, Voucher: true","timestamp":"2025-04-22 16:55:48"}
+{"level":"info","message":"Venta exitosa - Operación: desconocida","timestamp":"2025-04-22 16:55:49"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 16:55:49"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 16:56:09"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 603080NJMJ","timestamp":"2025-04-22 16:56:09"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 603080NJMJ0000000000, Voucher: true","timestamp":"2025-04-22 16:56:09"}
+{"level":"info","message":"Venta exitosa - Operación: desconocida","timestamp":"2025-04-22 16:56:09"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 16:56:09"}
+{"level":"info","message":"Recibida señal SIGINT. Cerrando servidor...","timestamp":"2025-04-22 16:56:48"}
+{"level":"info","message":"Servidor HTTP cerrado","timestamp":"2025-04-22 16:56:48"}
+{"level":"info","message":"Iniciando servidor en modo production","timestamp":"2025-04-22 16:56:49"}
+{"level":"info","message":"Servidor Transbank POS escuchando en puerto 3000","timestamp":"2025-04-22 16:56:49"}
+{"level":"info","message":"Conectado automáticamente al POS en /dev/ttyACM0","timestamp":"2025-04-22 16:56:50"}
+{"level":"info","message":"Conexión establecida con POS en /dev/ttyACM0","timestamp":"2025-04-22 16:56:50"}
+{"level":"info","message":"Commerce Code: tu_codigo_comercio","timestamp":"2025-04-22 16:56:50"}
+{"level":"info","message":"Terminal ID: IM750193","timestamp":"2025-04-22 16:56:50"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 16:57:02"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 603080NJMJ","timestamp":"2025-04-22 16:57:02"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 603080NJMJ0000000000, Voucher: true","timestamp":"2025-04-22 16:57:02"}
+{"level":"info","message":"Venta exitosa - Operación: desconocida","timestamp":"2025-04-22 16:57:02"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 16:57:02"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 16:57:45"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 603080NJMJ","timestamp":"2025-04-22 16:57:45"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 603080NJMJ0000000000, Voucher: true","timestamp":"2025-04-22 16:57:45"}
+{"level":"info","message":"Venta exitosa - Operación: desconocida","timestamp":"2025-04-22 16:57:53"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 16:57:53"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 16:58:07"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 603080NJMJ","timestamp":"2025-04-22 16:58:07"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 603080NJMJ0000000000, Voucher: true","timestamp":"2025-04-22 16:58:07"}
+{"level":"info","message":"Venta exitosa - Operación: desconocida","timestamp":"2025-04-22 16:58:07"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 16:58:07"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 16:58:24"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 603080NJMJ","timestamp":"2025-04-22 16:58:24"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 603080NJMJ0000000000, Voucher: true","timestamp":"2025-04-22 16:58:24"}
+{"level":"info","message":"Venta exitosa - Operación: desconocida","timestamp":"2025-04-22 16:58:24"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 16:58:24"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 16:59:08"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 848108KRXA","timestamp":"2025-04-22 16:59:08"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 848108KRXA0000000000, Voucher: true","timestamp":"2025-04-22 16:59:08"}
+{"level":"info","message":"Venta exitosa - Operación: desconocida","timestamp":"2025-04-22 16:59:08"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 16:59:08"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 16:59:55"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 940581VDQL","timestamp":"2025-04-22 16:59:55"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 940581VDQL0000000000, Voucher: true","timestamp":"2025-04-22 16:59:55"}
+{"level":"info","message":"Venta exitosa - Operación: desconocida","timestamp":"2025-04-22 16:59:55"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 16:59:55"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 17:01:35"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 940581VDQL","timestamp":"2025-04-22 17:01:35"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 940581VDQL0000000000, Voucher: true","timestamp":"2025-04-22 17:01:35"}
+{"level":"info","message":"Venta exitosa - Operación: desconocida","timestamp":"2025-04-22 17:01:35"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 17:01:35"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 17:03:47"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: B987654321","timestamp":"2025-04-22 17:03:47"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: B9876543210000000000, Voucher: false","timestamp":"2025-04-22 17:03:47"}
+{"level":"info","message":"Venta exitosa - Operación: desconocida","timestamp":"2025-04-22 17:03:47"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 17:03:47"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 17:04:18"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: B987654321","timestamp":"2025-04-22 17:04:18"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: B9876543210000000000, Voucher: false","timestamp":"2025-04-22 17:04:18"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 17:04:47"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 940581VDQL","timestamp":"2025-04-22 17:04:47"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 940581VDQL0000000000, Voucher: true","timestamp":"2025-04-22 17:04:47"}
+{"level":"warn","message":"Intento 1 fallido: Another message was already sent and it is still waiting for a response from the POS","timestamp":"2025-04-22 17:04:47"}
+{"level":"warn","message":"Intento 2 fallido: Another message was already sent and it is still waiting for a response from the POS","timestamp":"2025-04-22 17:04:47"}
+{"level":"error","message":"Error durante la venta: Another message was already sent and it is still waiting for a response from the POS","stack":"Error: Another message was already sent and it is still waiting for a response from the POS\n    at /opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/dist/transbank.js:1:8133\n    at new Promise (<anonymous>)\n    at e.exports.send (/opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/dist/transbank.js:1:7975)\n    at e.exports.sale (/opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/dist/transbank.js:1:3062)\n    at TransbankService.sendSaleCommand (/opt/lampp/htdocs/backTransbank-1/src/services/transbankService.js:86:37)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async exports.processPayment (/opt/lampp/htdocs/backTransbank-1/src/controllers/paymentController.js:19:20)","timestamp":"2025-04-22 17:04:47"}
+{"level":"error","message":"Error en transacción: Another message was already sent and it is still waiting for a response from the POS","stack":"Error: Another message was already sent and it is still waiting for a response from the POS\n    at /opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/dist/transbank.js:1:8133\n    at new Promise (<anonymous>)\n    at e.exports.send (/opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/dist/transbank.js:1:7975)\n    at e.exports.sale (/opt/lampp/htdocs/backTransbank-1/node_modules/transbank-pos-sdk/dist/transbank.js:1:3062)\n    at TransbankService.sendSaleCommand (/opt/lampp/htdocs/backTransbank-1/src/services/transbankService.js:86:37)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async exports.processPayment (/opt/lampp/htdocs/backTransbank-1/src/controllers/paymentController.js:19:20)","timestamp":"2025-04-22 17:04:47"}
+{"level":"info","message":"Venta exitosa - Operación: desconocida","timestamp":"2025-04-22 17:04:48"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 17:04:48"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 17:04:59"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: B987654321","timestamp":"2025-04-22 17:04:59"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: B9876543210000000000, Voucher: false","timestamp":"2025-04-22 17:04:59"}
+{"level":"info","message":"Venta exitosa - Operación: desconocida","timestamp":"2025-04-22 17:04:59"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 17:04:59"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 17:05:15"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 940581VDQL","timestamp":"2025-04-22 17:05:15"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 940581VDQL0000000000, Voucher: true","timestamp":"2025-04-22 17:05:15"}
+{"level":"info","message":"Venta exitosa - Operación: desconocida","timestamp":"2025-04-22 17:05:15"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 17:05:15"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 17:05:42"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 940581VDQL","timestamp":"2025-04-22 17:05:42"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 940581VDQL0000000000, Voucher: true","timestamp":"2025-04-22 17:05:42"}
+{"level":"info","message":"Venta exitosa - Operación: desconocida","timestamp":"2025-04-22 17:05:42"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 17:05:42"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 17:11:26"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 940581VDQL","timestamp":"2025-04-22 17:11:26"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 940581VDQL0000000000, Voucher: true","timestamp":"2025-04-22 17:11:26"}
+{"level":"info","message":"Venta exitosa - Operación: desconocida","timestamp":"2025-04-22 17:11:26"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 17:11:26"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 17:12:23"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 940581VDQL","timestamp":"2025-04-22 17:12:23"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 940581VDQL0000000000, Voucher: true","timestamp":"2025-04-22 17:12:23"}
+{"level":"info","message":"Venta exitosa - Operación: desconocida","timestamp":"2025-04-22 17:12:35"}
+{"level":"info","message":"Conexión exitosa - Operación: undefined","timestamp":"2025-04-22 17:12:35"}
+{"level":"info","message":"Recibida señal SIGINT. Cerrando servidor...","timestamp":"2025-04-22 17:12:55"}
+{"level":"info","message":"Servidor HTTP cerrado","timestamp":"2025-04-22 17:12:55"}
+{"level":"info","message":"Iniciando servidor en modo production","timestamp":"2025-04-22 17:13:13"}
+{"level":"info","message":"Servidor Transbank POS escuchando en puerto 3000","timestamp":"2025-04-22 17:13:13"}
+{"level":"info","message":"Conectado automáticamente al POS en /dev/ttyACM0","timestamp":"2025-04-22 17:13:13"}
+{"level":"info","message":"Conexión establecida con POS en /dev/ttyACM0","timestamp":"2025-04-22 17:13:13"}
+{"level":"info","message":"Commerce Code: tu_codigo_comercio","timestamp":"2025-04-22 17:13:13"}
+{"level":"info","message":"Terminal ID: IM750193","timestamp":"2025-04-22 17:13:13"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 17:13:30"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 301436ORNQ","timestamp":"2025-04-22 17:13:30"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 301436ORNQ0000000000, Voucher: true","timestamp":"2025-04-22 17:13:30"}
+{"level":"info","message":"Venta exitosa - Operación: desconocida","timestamp":"2025-04-22 17:13:30"}
+{"level":"error","message":"Error durante la venta: attempts is not defined","stack":"ReferenceError: attempts is not defined\n    at TransbankService.sendSaleCommand (/opt/lampp/htdocs/backTransbank-1/src/services/transbankService.js:117:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async exports.processPayment (/opt/lampp/htdocs/backTransbank-1/src/controllers/paymentController.js:19:20)","timestamp":"2025-04-22 17:13:30"}
+{"level":"error","message":"Error en transacción: attempts is not defined","stack":"ReferenceError: attempts is not defined\n    at TransbankService.sendSaleCommand (/opt/lampp/htdocs/backTransbank-1/src/services/transbankService.js:117:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async exports.processPayment (/opt/lampp/htdocs/backTransbank-1/src/controllers/paymentController.js:19:20)","timestamp":"2025-04-22 17:13:30"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 17:14:10"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: B987654321","timestamp":"2025-04-22 17:14:10"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: B9876543210000000000, Voucher: false","timestamp":"2025-04-22 17:14:10"}
+{"level":"info","message":"Venta exitosa - Operación: desconocida","timestamp":"2025-04-22 17:14:13"}
+{"level":"error","message":"Error durante la venta: attempts is not defined","stack":"ReferenceError: attempts is not defined\n    at TransbankService.sendSaleCommand (/opt/lampp/htdocs/backTransbank-1/src/services/transbankService.js:117:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async exports.processPayment (/opt/lampp/htdocs/backTransbank-1/src/controllers/paymentController.js:19:20)","timestamp":"2025-04-22 17:14:13"}
+{"level":"error","message":"Error en transacción: attempts is not defined","stack":"ReferenceError: attempts is not defined\n    at TransbankService.sendSaleCommand (/opt/lampp/htdocs/backTransbank-1/src/services/transbankService.js:117:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async exports.processPayment (/opt/lampp/htdocs/backTransbank-1/src/controllers/paymentController.js:19:20)","timestamp":"2025-04-22 17:14:13"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 17:14:20"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: B987654321","timestamp":"2025-04-22 17:14:20"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: B9876543210000000000, Voucher: false","timestamp":"2025-04-22 17:14:20"}
+{"level":"info","message":"Venta exitosa - Operación: desconocida","timestamp":"2025-04-22 17:14:23"}
+{"level":"error","message":"Error durante la venta: attempts is not defined","stack":"ReferenceError: attempts is not defined\n    at TransbankService.sendSaleCommand (/opt/lampp/htdocs/backTransbank-1/src/services/transbankService.js:117:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async exports.processPayment (/opt/lampp/htdocs/backTransbank-1/src/controllers/paymentController.js:19:20)","timestamp":"2025-04-22 17:14:23"}
+{"level":"error","message":"Error en transacción: attempts is not defined","stack":"ReferenceError: attempts is not defined\n    at TransbankService.sendSaleCommand (/opt/lampp/htdocs/backTransbank-1/src/services/transbankService.js:117:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async exports.processPayment (/opt/lampp/htdocs/backTransbank-1/src/controllers/paymentController.js:19:20)","timestamp":"2025-04-22 17:14:23"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 17:14:37"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 431437OJMK","timestamp":"2025-04-22 17:14:37"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 431437OJMK0000000000, Voucher: true","timestamp":"2025-04-22 17:14:37"}
+{"level":"info","message":"Venta exitosa - Operación: desconocida","timestamp":"2025-04-22 17:14:37"}
+{"level":"error","message":"Error durante la venta: attempts is not defined","stack":"ReferenceError: attempts is not defined\n    at TransbankService.sendSaleCommand (/opt/lampp/htdocs/backTransbank-1/src/services/transbankService.js:117:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async exports.processPayment (/opt/lampp/htdocs/backTransbank-1/src/controllers/paymentController.js:19:20)","timestamp":"2025-04-22 17:14:37"}
+{"level":"error","message":"Error en transacción: attempts is not defined","stack":"ReferenceError: attempts is not defined\n    at TransbankService.sendSaleCommand (/opt/lampp/htdocs/backTransbank-1/src/services/transbankService.js:117:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async exports.processPayment (/opt/lampp/htdocs/backTransbank-1/src/controllers/paymentController.js:19:20)","timestamp":"2025-04-22 17:14:37"}
+{"level":"info","message":"Recibida señal SIGINT. Cerrando servidor...","timestamp":"2025-04-22 17:15:50"}
+{"level":"info","message":"Servidor HTTP cerrado","timestamp":"2025-04-22 17:15:50"}
+{"level":"info","message":"Conexión con POS cerrada","timestamp":"2025-04-22 17:15:50"}
+{"level":"info","message":"Iniciando servidor en modo production","timestamp":"2025-04-22 17:15:52"}
+{"level":"info","message":"Servidor Transbank POS escuchando en puerto 3000","timestamp":"2025-04-22 17:15:52"}
+{"level":"info","message":"Conectado automáticamente al POS en /dev/ttyACM0","timestamp":"2025-04-22 17:15:53"}
+{"level":"info","message":"Conexión establecida con POS en /dev/ttyACM0","timestamp":"2025-04-22 17:15:53"}
+{"level":"info","message":"Commerce Code: tu_codigo_comercio","timestamp":"2025-04-22 17:15:53"}
+{"level":"info","message":"Terminal ID: IM750193","timestamp":"2025-04-22 17:15:53"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 17:16:19"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: B987654321","timestamp":"2025-04-22 17:16:19"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: B9876543210000000000, Voucher: false","timestamp":"2025-04-22 17:16:19"}
+{"level":"info","message":"Venta exitosa - Operación: desconocida","timestamp":"2025-04-22 17:16:19"}
+{"level":"info","message":"Conexión exitosa - Operación: null","timestamp":"2025-04-22 17:16:19"}
+{"level":"info","message":"POST /api/payment","timestamp":"2025-04-22 17:17:36"}
+{"level":"info","message":"Iniciando transacción - Monto: 100, Ticket: 730933HEDJ","timestamp":"2025-04-22 17:17:36"}
+{"level":"info","message":"Enviando venta - Monto: 100, Ticket: 730933HEDJ0000000000, Voucher: true","timestamp":"2025-04-22 17:17:36"}
+{"level":"info","message":"Venta exitosa - Operación: desconocida","timestamp":"2025-04-22 17:17:37"}
+{"level":"info","message":"Conexión exitosa - Operación: null","timestamp":"2025-04-22 17:17:37"}
+{"level":"info","message":"Iniciando servidor en modo production","timestamp":"2025-04-22 17:26:08"}
+{"level":"info","message":"Servidor Transbank POS escuchando en puerto 3000","timestamp":"2025-04-22 17:26:08"}
+{"level":"warn","message":"No se pudo conectar a /dev/ttyACM0: ACK has not been received in 2000 ms.","timestamp":"2025-04-22 17:26:10"}
+{"level":"warn","message":"No se pudo conectar a /dev/ttyACM1: ACK has not been received in 2000 ms.","timestamp":"2025-04-22 17:26:12"}
+{"level":"error","message":"Error en autoconnect(): No fue posible establecer conexión con ninguno de los puertos detectados","stack":"Error: No fue posible establecer conexión con ninguno de los puertos detectados\n    at TransbankService.autoconnect (/opt/lampp/htdocs/backTransbank-1/src/services/transbankService.js:49:13)","timestamp":"2025-04-22 17:26:12"}
+{"level":"error","message":"Error en conexión automática con POS: No fue posible establecer conexión con ninguno de los puertos detectados","stack":"Error: No fue posible establecer conexión con ninguno de los puertos detectados\n    at TransbankService.autoconnect (/opt/lampp/htdocs/backTransbank-1/src/services/transbankService.js:49:13)","timestamp":"2025-04-22 17:26:12"}
+{"level":"info","message":"Recibida señal SIGINT. Cerrando servidor...","timestamp":"2025-04-22 17:26:15"}
+{"level":"info","message":"Iniciando servidor en modo production","timestamp":"2025-04-22 17:26:22"}
+{"level":"info","message":"Servidor Transbank POS escuchando en puerto 3000","timestamp":"2025-04-22 17:26:22"}
+{"level":"warn","message":"No se pudo conectar a /dev/ttyACM0: ACK has not been received in 2000 ms.","timestamp":"2025-04-22 17:26:24"}
+{"level":"warn","message":"No se pudo conectar a /dev/ttyACM1: ACK has not been received in 2000 ms.","timestamp":"2025-04-22 17:26:26"}
+{"level":"error","message":"Error en autoconnect(): No fue posible establecer conexión con ninguno de los puertos detectados","stack":"Error: No fue posible establecer conexión con ninguno de los puertos detectados\n    at TransbankService.autoconnect (/opt/lampp/htdocs/backTransbank-1/src/services/transbankService.js:49:13)","timestamp":"2025-04-22 17:26:26"}
+{"level":"error","message":"Error en conexión automática con POS: No fue posible establecer conexión con ninguno de los puertos detectados","stack":"Error: No fue posible establecer conexión con ninguno de los puertos detectados\n    at TransbankService.autoconnect (/opt/lampp/htdocs/backTransbank-1/src/services/transbankService.js:49:13)","timestamp":"2025-04-22 17:26:26"}
+{"level":"info","message":"Recibida señal SIGINT. Cerrando servidor...","timestamp":"2025-04-22 17:26:38"}
+{"level":"info","message":"Iniciando servidor en modo production","timestamp":"2025-04-22 17:26:57"}
+{"level":"info","message":"Servidor Transbank POS escuchando en puerto 3000","timestamp":"2025-04-22 17:26:57"}
+{"level":"warn","message":"No se pudo conectar a /dev/ttyACM0: ACK has not been received in 2000 ms.","timestamp":"2025-04-22 17:26:59"}
+{"level":"warn","message":"No se pudo conectar a /dev/ttyACM1: ACK has not been received in 2000 ms.","timestamp":"2025-04-22 17:27:01"}
+{"level":"error","message":"Error en autoconnect(): No fue posible establecer conexión con ninguno de los puertos detectados","stack":"Error: No fue posible establecer conexión con ninguno de los puertos detectados\n    at TransbankService.autoconnect (/opt/lampp/htdocs/backTransbank-1/src/services/transbankService.js:49:13)","timestamp":"2025-04-22 17:27:01"}
+{"level":"error","message":"Error en conexión automática con POS: No fue posible establecer conexión con ninguno de los puertos detectados","stack":"Error: No fue posible establecer conexión con ninguno de los puertos detectados\n    at TransbankService.autoconnect (/opt/lampp/htdocs/backTransbank-1/src/services/transbankService.js:49:13)","timestamp":"2025-04-22 17:27:01"}
+{"level":"info","message":"Recibida señal SIGINT. Cerrando servidor...","timestamp":"2025-04-22 17:27:28"}
+{"level":"info","message":"Iniciando servidor en modo production","timestamp":"2025-04-22 17:27:36"}
+{"level":"info","message":"Servidor Transbank POS escuchando en puerto 3000","timestamp":"2025-04-22 17:27:36"}
+{"level":"warn","message":"No se pudo conectar a /dev/ttyACM0: ACK has not been received in 2000 ms.","timestamp":"2025-04-22 17:27:38"}
+{"level":"warn","message":"No se pudo conectar a /dev/ttyACM1: ACK has not been received in 2000 ms.","timestamp":"2025-04-22 17:27:40"}
+{"level":"error","message":"Error en autoconnect(): No fue posible establecer conexión con ninguno de los puertos detectados","stack":"Error: No fue posible establecer conexión con ninguno de los puertos detectados\n    at TransbankService.autoconnect (/opt/lampp/htdocs/backTransbank-1/src/services/transbankService.js:49:13)","timestamp":"2025-04-22 17:27:40"}
+{"level":"error","message":"Error en conexión automática con POS: No fue posible establecer conexión con ninguno de los puertos detectados","stack":"Error: No fue posible establecer conexión con ninguno de los puertos detectados\n    at TransbankService.autoconnect (/opt/lampp/htdocs/backTransbank-1/src/services/transbankService.js:49:13)","timestamp":"2025-04-22 17:27:40"}
+{"level":"info","message":"Recibida señal SIGINT. Cerrando servidor...","timestamp":"2025-04-22 17:28:00"}
+{"level":"info","message":"Iniciando servidor en modo production","timestamp":"2025-04-22 17:28:05"}
+{"level":"info","message":"Servidor Transbank POS escuchando en puerto 3000","timestamp":"2025-04-22 17:28:05"}
+{"level":"warn","message":"No se pudo conectar a /dev/ttyACM0: ACK has not been received in 2000 ms.","timestamp":"2025-04-22 17:28:07"}
+{"level":"warn","message":"No se pudo conectar a /dev/ttyACM1: ACK has not been received in 2000 ms.","timestamp":"2025-04-22 17:28:09"}
+{"level":"error","message":"Error en autoconnect(): No fue posible establecer conexión con ninguno de los puertos detectados","stack":"Error: No fue posible establecer conexión con ninguno de los puertos detectados\n    at TransbankService.autoconnect (/opt/lampp/htdocs/backTransbank-1/src/services/transbankService.js:49:13)","timestamp":"2025-04-22 17:28:09"}
+{"level":"error","message":"Error en conexión automática con POS: No fue posible establecer conexión con ninguno de los puertos detectados","stack":"Error: No fue posible establecer conexión con ninguno de los puertos detectados\n    at TransbankService.autoconnect (/opt/lampp/htdocs/backTransbank-1/src/services/transbankService.js:49:13)","timestamp":"2025-04-22 17:28:09"}
+{"level":"info","message":"Iniciando servidor en modo production","timestamp":"2025-04-22 17:30:57"}
+{"level":"info","message":"Servidor Transbank POS escuchando en puerto 3000","timestamp":"2025-04-22 17:30:57"}
+{"level":"error","message":"Error en autoconnect(): No se encontró ningún POS conectado (puertos ACM o USB)","stack":"Error: No se encontró ningún POS conectado (puertos ACM o USB)\n    at TransbankService.autoconnect (/opt/lampp/htdocs/backTransbank-1/src/services/transbankService.js:29:15)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","timestamp":"2025-04-22 17:30:57"}
+{"level":"error","message":"Error en conexión automática con POS: No se encontró ningún POS conectado (puertos ACM o USB)","stack":"Error: No se encontró ningún POS conectado (puertos ACM o USB)\n    at TransbankService.autoconnect (/opt/lampp/htdocs/backTransbank-1/src/services/transbankService.js:29:15)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","timestamp":"2025-04-22 17:30:57"}
+{"level":"info","message":"Recibida señal SIGINT. Cerrando servidor...","timestamp":"2025-04-22 17:32:08"}
+{"level":"info","message":"Iniciando servidor en modo production","timestamp":"2025-04-22 17:32:23"}
+{"level":"info","message":"Servidor Transbank POS escuchando en puerto 3000","timestamp":"2025-04-22 17:32:23"}
+{"level":"warn","message":"No se pudo conectar a /dev/ttyACM0: ACK has not been received in 2000 ms.","timestamp":"2025-04-22 17:32:26"}
+{"level":"warn","message":"No se pudo conectar a /dev/ttyACM1: ACK has not been received in 2000 ms.","timestamp":"2025-04-22 17:32:28"}
+{"level":"error","message":"Error en autoconnect(): No fue posible establecer conexión con ninguno de los puertos detectados","stack":"Error: No fue posible establecer conexión con ninguno de los puertos detectados\n    at TransbankService.autoconnect (/opt/lampp/htdocs/backTransbank-1/src/services/transbankService.js:49:13)","timestamp":"2025-04-22 17:32:28"}
+{"level":"error","message":"Error en conexión automática con POS: No fue posible establecer conexión con ninguno de los puertos detectados","stack":"Error: No fue posible establecer conexión con ninguno de los puertos detectados\n    at TransbankService.autoconnect (/opt/lampp/htdocs/backTransbank-1/src/services/transbankService.js:49:13)","timestamp":"2025-04-22 17:32:28"}
+{"level":"info","message":"Recibida señal SIGINT. Cerrando servidor...","timestamp":"2025-04-22 17:32:39"}
+{"level":"info","message":"Iniciando servidor en modo production","timestamp":"2025-04-22 17:32:41"}
+{"level":"info","message":"Servidor Transbank POS escuchando en puerto 3000","timestamp":"2025-04-22 17:32:41"}
+{"level":"warn","message":"No se pudo conectar a /dev/ttyACM0: ACK has not been received in 2000 ms.","timestamp":"2025-04-22 17:32:43"}
+{"level":"warn","message":"No se pudo conectar a /dev/ttyACM1: ACK has not been received in 2000 ms.","timestamp":"2025-04-22 17:32:45"}
+{"level":"error","message":"Error en autoconnect(): No fue posible establecer conexión con ninguno de los puertos detectados","stack":"Error: No fue posible establecer conexión con ninguno de los puertos detectados\n    at TransbankService.autoconnect (/opt/lampp/htdocs/backTransbank-1/src/services/transbankService.js:49:13)","timestamp":"2025-04-22 17:32:45"}
+{"level":"error","message":"Error en conexión automática con POS: No fue posible establecer conexión con ninguno de los puertos detectados","stack":"Error: No fue posible establecer conexión con ninguno de los puertos detectados\n    at TransbankService.autoconnect (/opt/lampp/htdocs/backTransbank-1/src/services/transbankService.js:49:13)","timestamp":"2025-04-22 17:32:45"}
+{"level":"info","message":"Recibida señal SIGINT. Cerrando servidor...","timestamp":"2025-04-22 17:34:01"}
+{"level":"info","message":"Iniciando servidor en modo production","timestamp":"2025-04-22 17:34:17"}
+{"level":"info","message":"Servidor Transbank POS escuchando en puerto 3000","timestamp":"2025-04-22 17:34:17"}
+{"level":"warn","message":"No se pudo conectar a /dev/ttyACM0: ACK has not been received in 2000 ms.","timestamp":"2025-04-22 17:34:19"}
+{"level":"warn","message":"No se pudo conectar a /dev/ttyACM1: ACK has not been received in 2000 ms.","timestamp":"2025-04-22 17:34:21"}
+{"level":"error","message":"Error en autoconnect(): No fue posible establecer conexión con ninguno de los puertos detectados","stack":"Error: No fue posible establecer conexión con ninguno de los puertos detectados\n    at TransbankService.autoconnect (/opt/lampp/htdocs/backTransbank-1/src/services/transbankService.js:49:13)","timestamp":"2025-04-22 17:34:21"}
+{"level":"error","message":"Error en conexión automática con POS: No fue posible establecer conexión con ninguno de los puertos detectados","stack":"Error: No fue posible establecer conexión con ninguno de los puertos detectados\n    at TransbankService.autoconnect (/opt/lampp/htdocs/backTransbank-1/src/services/transbankService.js:49:13)","timestamp":"2025-04-22 17:34:21"}

@@ -4,6 +4,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const logger = require('./utils/logger');
 const path = require('path');
+const { imprimirTicket } = require('./services/printService');
+
 
 const paymentController = require('./controllers/paymentController');
 const terminalController = require('./controllers/terminalController');
@@ -29,6 +31,16 @@ app.use(bodyParser.json({
 }));
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// Ruta de impresion
+app.post('/api/print', async (req, res) => {
+  try {
+    const resultado = await imprimirTicket(req.body);
+    res.json({ success: true, message: resultado });
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).json({ success: false, error: error.message });
+  }
+});
 
 // Rutas de pagos
 app.post('/api/payment', paymentController.processPayment);

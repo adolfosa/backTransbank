@@ -1,20 +1,18 @@
 const { POSAutoservicio } = require('transbank-pos-sdk');
 const autoReconnectPOS = require('../utils/posReconnect');
-const logger = require('../utils/logger');
 
 class TransbankService {
   constructor() {
     this.pos = new POSAutoservicio();
     this.connectedPort = null;
 
-    // Deshabilitar mensajes de debug e intermedios
     this.pos.setDebug(false);
   }
 
   async connectToPort(portPath) {
     const response = await this.pos.connect(portPath);
     this.connectedPort = { path: portPath, ...response };
-    logger.info(`Conectado manualmente al puerto ${portPath}`);
+    console.log(`Conectado manualmente al puerto ${portPath}`);
     return response;
   }
 
@@ -24,13 +22,12 @@ class TransbankService {
       path: port.path,
       manufacturer: port.manufacturer || 'Desconocido'
     }));
-  }  
+  }
 
   async enviarVenta(amount, ticketNumber) {
     try {
-      // Si el POS no está conectado, intentar reconexión
       if (!this.deviceConnected) {
-        logger.warn('POS desconectado al intentar enviar venta. Intentando reconexión previa...');
+        console.warn('POS desconectado al intentar enviar venta. Intentando reconexión previa...');
         const reconnected = await autoReconnectPOS();
         if (!reconnected) {
           throw new Error('No se pudo reconectar al POS');
@@ -39,32 +36,31 @@ class TransbankService {
 
       const ticket = ticketNumber.padEnd(20, '0').substring(0, 20);
       const response = await this.pos.sale(amount, ticket);
-      logger.info(`Venta enviada - Operación: ${response.operationNumber}`);
+      console.log(`Venta enviada - Operación: ${response.operationNumber}`);
       return response;
     } catch (error) {
-      // Si hay mensaje pendiente
       const pending = error.message.includes('still waiting for a response');
       const timeout = error.message.includes('not been received');
 
       if (pending || timeout) {
-        logger.warn('⚠️ Estado bloqueado por transacción anterior. Reiniciando conexión...');
+        console.warn('⚠️ Estado bloqueado por transacción anterior. Reiniciando conexión...');
         await this.closeConnection();
-        await autoReconnectPOS(); // Forzar reconexión completa
+        await autoReconnectPOS();
       }
 
-      logger.error('Error durante la venta:', error);
+      console.error('Error durante la venta:', error);
       throw error;
     }
-  }  
+  }
 
   async enviarVentaReversa(amount, originalOperationNumber) {
     try {
       const ticket = originalOperationNumber.padEnd(20, '0').substring(0, 20);
       const response = await this.pos.refund(amount, ticket, false);
-      logger.info(`Reversa exitosa - Operación: ${response.operationNumber}`);
+      console.log(`Reversa exitosa - Operación: ${response.operationNumber}`);
       return response;
     } catch (error) {
-      logger.error('Error durante la reversa:', error);
+      console.error('Error durante la reversa:', error);
       throw error;
     }
   }
@@ -72,8 +68,8 @@ class TransbankService {
   async getLastTransaction() {
     try {
       const response = await this.pos.getLastSale();
-      logger.debug('Respuesta completa del POS:', JSON.stringify(response, null, 2));
-      
+      console.debug('Respuesta completa del POS:', JSON.stringify(response, null, 2));
+
       return {
         success: true,
         message: 'Transacción obtenida correctamente',
@@ -84,16 +80,16 @@ class TransbankService {
           amount: response.amount,
           cardNumber: response.last4Digits ? `••••${response.last4Digits}` : null,
           authorizationCode: response.authorizationCode,
-          timestamp: response.realDate && response.realTime 
-                    ? `${response.realDate} ${response.realTime}` 
-                    : null,
+          timestamp: response.realDate && response.realTime
+            ? `${response.realDate} ${response.realTime}`
+            : null,
           cardType: response.cardType,
           cardBrand: response.cardBrand,
-          rawData: response // Todos los datos originales por si necesitas algo más
+          rawData: response
         }
       };
     } catch (error) {
-      logger.error('Error al obtener última transacción:', error);
+      console.error('Error al obtener última transacción:', error);
       throw error;
     }
   }
@@ -101,10 +97,10 @@ class TransbankService {
   async sendCloseCommand(printReport = true) {
     try {
       const response = await this.pos.closeDay({ printOnPos: printReport }, false);
-      logger.info('Cierre de terminal exitoso');
+      console.log('Cierre de terminal exitoso');
       return response;
     } catch (error) {
-      logger.error('Error durante el cierre de terminal:', error);
+      console.error('Error durante el cierre de terminal:', error);
       throw error;
     }
   }
@@ -112,10 +108,10 @@ class TransbankService {
   async loadKey() {
     try {
       await this.pos.loadKeys();
-      logger.info('Inicialización del terminal completada (llaves cargadas)');
+      console.log('Inicialización del terminal completada (llaves cargadas)');
       return { success: true, message: 'Llaves cargadas correctamente' };
     } catch (error) {
-      logger.error('Error al inicializar terminal (cargar llaves):', error);
+      console.error('Error al inicializar terminal (cargar llaves):', error);
       throw error;
     }
   }
@@ -132,14 +128,14 @@ class TransbankService {
     if (this.connectedPort) {
       try {
         await this.pos.disconnect();
-        logger.info('Conexión con POS cerrada correctamente');
+        console.log('Conexión con POS cerrada correctamente');
       } catch (error) {
-        logger.error('Error al cerrar conexión con POS:', error.message);
+        console.error('Error al cerrar conexión con POS:', error.message);
       } finally {
         this.connectedPort = null;
       }
     } else {
-      logger.warn('No hay conexión activa que cerrar');
+      console.warn('No hay conexión activa que cerrar');
     }
   }
 }

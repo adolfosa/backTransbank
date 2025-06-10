@@ -1,5 +1,5 @@
 const transbankService = require('../services/transbankService');
-const logger = require('./logger'); // asegúrate que logger esté aquí
+const logger = require('./logger'); 
 
 async function autoReconnectPOS() {
   const preferredPort = process.env.TBK_PORT_PATH;
